@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to the File Sharing App</h1>
+        <nav>
+            <a href="{{ url_for('upload') }}">Upload File</a>
+            <a href="{{ url_for('logout') }}">Logout</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Available Files</h2>
+        <ul>
+            {% for file in files %}
+            <li>
+                <a href="{{ url_for('download', file_id=file.id) }}">{{ file.filename }}</a>
+                (Accessed {{ file.access_count }} times)
+            </li>
+            {% endfor %}
+        </ul>
+    </main>
+</body>
+</html>

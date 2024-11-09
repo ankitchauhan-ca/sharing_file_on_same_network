@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>File Sharing App</title>
+</head>
+<body>
+    <h1>Welcome to the File Sharing App</h1>
+    <a href="{{ url_for('upload') }}">Upload File</a> |
+    <a href="{{ url_for('logout') }}">Logout</a>
+    <hr>
+    <h2>Available Files</h2>
+    <ul>
+        {% for file in files %}
+        <li>
+            <a href="{{ url_for('download', file_id=file.id) }}">{{ file.filename }}</a>
+            (Accessed {{ file.access_count }} times)
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
