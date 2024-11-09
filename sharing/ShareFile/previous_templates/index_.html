@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>File Sharing App</h1>
+        </div>
+        <nav>
+            <a href="{{ url_for('upload') }}" class="btn">Upload File</a>
+            <a href="{{ url_for('logout') }}" class="btn">Logout</a>
+        </nav>
+    </header>
+    <main>
+        <section class="intro">
+            <h2>Welcome to the File Sharing App</h2>
+            <p>Share your files easily with others! Browse through the available files below, or upload your own.</p>
+        </section>
+        <section class="file-list">
+            <h3>Available Files</h3>
+            <ul>
+                {% for file in files %}
+                <li>
+                    <a href="{{ url_for('download', file_id=file.id) }}" class="file-link">
+                        {{ file.filename }}
+                    </a>
+                    <span class="access-count">(Accessed {{ file.access_count }} times)</span>
+                </li>
+                {% endfor %}
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 File Sharing App | All rights reserved.</p>
+    </footer>
+</body>
+</html>
