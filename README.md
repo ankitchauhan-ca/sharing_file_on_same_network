@@ -23,8 +23,8 @@ To run this project, you will need the following:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/file-sharing-app.git
-   cd file-sharing-app
+   git clone https://github.com/ankitchauhan-ca/sharing_file_on_same_network.git
+   cd sharing_file_on_same_network
 
 
 ### Key Sections in the `README.md`
@@ -36,5 +36,6 @@ To run this project, you will need the following:
 5. **Usage**: Instructions on how users can interact with the app.
 6. **Contributing**: How to contribute to the project.
 7. **License**: The type of license the project is under (you can choose the MIT license or others).
+8. **Run**: To run use 'sharing/Scripts/activate' then run by going cd sharing and cd ShareFile and run python app.py
 
 This `README.md` provides a comprehensive guide for setting up, using, and contributing to your file-sharing app. Adjust the URLs and placeholders based on your actual GitHub account and other project-specific details.
