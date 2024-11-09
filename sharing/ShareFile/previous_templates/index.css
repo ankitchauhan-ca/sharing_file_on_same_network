@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #0066cc;
+    border-radius: 20px;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
+
+header .logo h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    margin: 0 15px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #004b8d;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #005b9f;
+}
+
+main {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.intro {
+    margin-bottom: 30px;
+}
+
+.intro h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #0066cc;
+}
+
+.intro p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.file-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.file-list h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #0066cc;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #fff;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.file-link {
+    font-size: 1.2rem;
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.file-link:hover {
+    text-decoration: underline;
+}
+
+.access-count {
+    display: block;
+    margin-top: 10px;
+    color: #888;
+    font-size: 1rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    header .logo h1 {
+        font-size: 28px;
+    }
+
+    nav a {
+        padding: 8px 15px;
+        margin: 0 10px;
+    }
+
+    .intro h2 {
+        font-size: 1.6rem;
+    }
+
+    .file-list h3 {
+        font-size: 1.6rem;
+    }
+
+    .file-list ul {
+        padding: 0 20px;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px 0;
+    }
+
+    nav a {
+        padding: 8px 12px;
+    }
+
+    .file-link {
+        font-size: 1rem;
+    }
+
+    .access-count {
+        font-size: 0.9rem;
+    }
+}
